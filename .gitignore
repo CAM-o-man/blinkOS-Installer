@@ -1,0 +1,4 @@
+# Exclude IDEA configuration files, as usual.
+.idea
+# Exclude node_modules, it's going to be waaay too large.
+node_modules
