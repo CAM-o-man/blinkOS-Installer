@@ -46,7 +46,11 @@
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
-    "events": "^3.0.0"
+    "events": "^3.0.0",
+    "glob": "^7.1.4",
+    "interpret": "^1.2.0",
+    "rechoir": "^0.7.0",
+    "shelljs": "^0.8.3"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.43",
