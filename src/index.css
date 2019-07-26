@@ -1,6 +1,32 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  margin: auto;
-  max-width: 38rem;
-  padding: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: auto;
+    max-width: 38rem;
+    padding: 2rem;
+    align-content: center;
+}
+
+img.blink {
+    width: 200px;
+    height: auto;
+    align-content: center;
+}
+
+p {
+    align-content: center;
+}
+
+img.pixel {
+    width: 200px;
+    height: auto;
+    align-content: center;
+}
+
+img.pixel#devIcon {
+    width: 100px;
+    height: auto;
+}
+
+p#debug {
+    display: none;
 }
