@@ -1,22 +1,21 @@
 {
-  "name": "blinkinstall",
-  "productName": "blinkinstall",
-  "version": "1.0.0",
-  "description": "My Electron application description",
+  "name": "blinkosinstaller",
+  "productName": "blinkinstaller",
+  "version": "1.0.2",
+  "description": "The desktop installer for blinkOS, v1.0.0",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\""
   },
-  "keywords": [],
+  "keywords": ["OS", "Installer", "Mobile Phone", "Phone", "BlinkOS", "hackSugar"],
   "author": {
     "name": "Connor",
     "email": "cam-o-man@live.com"
   },
-  "license": "MIT",
+  "license": "GNU General Public License v3.0",
   "config": {
     "forge": {
       "packagerConfig": {},
@@ -45,12 +44,12 @@
     }
   },
   "dependencies": {
+    "@cam-o-man/simpleshell": "1.2.1",
     "electron-squirrel-startup": "^1.0.0",
     "events": "^3.0.0",
     "glob": "^7.1.4",
     "interpret": "^1.2.0",
-    "rechoir": "^0.7.0",
-    "shelljs": "^0.8.3"
+    "rechoir": "^0.7.0"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.43",
@@ -58,7 +57,6 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.43",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.43",
     "@electron-forge/maker-zip": "^6.0.0-beta.43",
-    "electron": "5.0.8",
-    "shelljs": "^0.8.3"
+    "electron": "5.0.8"
   }
 }

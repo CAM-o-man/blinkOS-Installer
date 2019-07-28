@@ -2,3 +2,4 @@
 .idea
 # Exclude node_modules, it's going to be waaay too large.
 node_modules
+out
