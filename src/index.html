@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="index.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>blinkOS Installer</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
     <body>
-        <img class="blink" id="logo" src="../blink-logo.png" alt="blinkOS logo">
-        <h1>blinkOS</h1>
-        <p>Welcome to the blinkOS installer. </p>
-        <p>Please note that continuing will wipe all data on your phone.</p>
-        <p>To continue, please press next.</p>
-        <a href="page2.html"><button class="continue" id="page1Button">Next</button></a>
+        <section>
+        <div class="image"><img class="blink" id="logo" src="img/blink-logo.png" alt="blinkOS logo"></div>
+        <div class="main-text">
+            <h1><b>Welcome to blinkOS!</b></h1>
+            <p>In just a matter of minutes, you'll have a private and simple phone.</p>
+            <p id="warning">WARNING: Installing blinkOS will delete all the data on your phone! Back up any important data.</p>
+        </div>
+        </section>
     </body>
     <footer>
+        <!-- TODO fix skip link-->
+        <p id="skip">Already have an unlocked bootloader? Click <a href="" id="skip-link">here.</a></p>
+        <a href="page2.html"><button class="continue" id="page1Next">Next</button></a>
     </footer>
 </html>

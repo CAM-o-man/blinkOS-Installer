@@ -10,7 +10,14 @@
     "make": "electron-forge make",
     "lint": "echo \"No linting configured\""
   },
-  "keywords": ["OS", "Installer", "Mobile Phone", "Phone", "BlinkOS", "hackSugar"],
+  "keywords": [
+    "OS",
+    "Installer",
+    "Mobile Phone",
+    "Phone",
+    "BlinkOS",
+    "hackSugar"
+  ],
   "author": {
     "name": "Connor",
     "email": "cam-o-man@live.com"

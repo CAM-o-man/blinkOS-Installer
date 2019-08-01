@@ -1,0 +1,71 @@
+body {
+    font-family: "Droid Sans", sans-serif;
+    margin: auto;
+    max-width: 38rem;
+    padding: 2rem;
+    align-content: center;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+button {
+    font-family: "Droid Sans", sans-serif;
+    background-color: #333333;
+    border: 3px solid white;
+    color: white;
+    padding: 4px;
+
+}
+
+.continue {
+    float: right;
+}
+
+img {
+    float: left;
+    margin-right: 30px;
+}
+
+.image {
+    float: left;
+}
+
+img.blink {
+    width: 150px;
+    height: auto;
+    align-content: center;
+}
+
+p {
+    align-content: center;
+}
+
+img.pixel {
+    width: 200px;
+    height: auto;
+    align-content: center;
+}
+
+img.pixel#devIcon {
+    width: 100px;
+    height: auto;
+}
+
+p#debug {
+    display: none;
+}
+
+p#warning {
+    color: red;
+}
+
+#skip {
+    float: left;
+    font-family: "Droid Sans", sans-serif;
+    font-size: 12px;
+}
+
+#skip-link {
+    color: white;
+    text-decoration: underline white;
+}
