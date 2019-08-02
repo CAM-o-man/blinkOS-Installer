@@ -9,8 +9,8 @@ if (require('electron-squirrel-startup')) { // eslint-disable-line global-requir
     app.quit();
 }
 
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
+/* Keep a global reference of the window object, if you don't, the window will
+be closed automatically when the JavaScript object is garbage collected.*/
 let mainWindow;
 
 const createWindow = () => {
@@ -24,11 +24,14 @@ const createWindow = () => {
         resizable: false
     });
 
+    //Removes top menu
+    mainWindow.removeMenu()
+
     // and load the index.html of the app.
     mainWindow.loadURL(`file://${__dirname}/index.html`);
 
     // Open the DevTools.
-    mainWindow.webContents.openDevTools();
+    //mainWindow.webContents.openDevTools();
 
     // Emitted when the window is closed.
     mainWindow.on('closed', () => {
@@ -85,3 +88,4 @@ eventEmitter.on('firstButtonClicked', () => {
                                                           //This is important to ensure that the ${__dirname} variable works.
 
 });
+
