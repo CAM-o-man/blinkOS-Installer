@@ -16,11 +16,12 @@ let mainWindow;
 const createWindow = () => {
     // Create the browser window.
     mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: 600,
+        height: 450,
         webPreferences: {
             nodeIntegration: true
-        }
+        },
+        resizable: false
     });
 
     // and load the index.html of the app.
