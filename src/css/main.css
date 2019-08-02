@@ -54,6 +54,11 @@ img.pixel#devIcon {
     height: auto;
 }
 
+#placeholder {
+    width: 108px;
+    height: auto;
+}
+
 p#debug {
     display: none;
 }
