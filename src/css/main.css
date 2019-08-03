@@ -118,21 +118,13 @@ p#descrip1 {
 
 #text1 {
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 38%;
 }
 
 a {
     color: white;
 }
-
-/* #skip-link {
-    color: white;
-    text-decoration: underline white;
-<<<<<<< HEAD
-} */
-
-
 
 .loader {
     border: 10px solid gray;
@@ -152,4 +144,9 @@ a {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
->>>>>>> 81b0a36bcce01dca72858e9a98188d80d4ceece3
+
+video {
+    width: 175px;
+    height: auto;
+    object-fit: fill;
+}
