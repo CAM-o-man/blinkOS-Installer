@@ -17,7 +17,7 @@ async function runScript() {
         console.log(`Flashing complete: ${data}.`);
         //htmlout.innerText = `Flashing complete: ${data}.`;
     }
-    remote.getCurrentWindow().loadURL(`file://${__dirname}/done.html`);
+    remote.getCurrentWindow().loadURL(`file://${__dirname}/bootloader-lock.html`);
 }
 
 // noinspection JSCheckFunctionSignatures
