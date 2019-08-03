@@ -88,4 +88,3 @@ eventEmitter.on('firstButtonClicked', () => {
                                                           //This is important to ensure that the ${__dirname} variable works.
 
 });
-

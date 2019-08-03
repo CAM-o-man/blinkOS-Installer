@@ -56,7 +56,8 @@
     "events": "^3.0.0",
     "glob": "^7.1.4",
     "interpret": "^1.2.0",
-    "rechoir": "^0.7.0"
+    "rechoir": "^0.7.0",
+    "remote": "^0.2.6"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.43",
