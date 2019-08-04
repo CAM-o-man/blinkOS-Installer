@@ -6,7 +6,7 @@ async function lock() {
         console.log(`Present Working Directory: ${data}`);
     }
     child = shell('src/fastboot', ['flashing', 'lock']);
-    for await (let data of child.stdout) {
+    for await (let data of child.stdout || child.stderr) {
         console.log(`Locking bootloader: ${data}`);
     }
 }

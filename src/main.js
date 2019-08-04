@@ -6,19 +6,26 @@ async function runScript() {
     //const htmlerr = document.getElementById("errors");
     //const htmlpath = document.getElementById("path");
     let child = shell(`pwd`, []);
-    for await (let data of child.stdout) {
+    for await (let data of child.stdout || child.stderr) {
         console.log(`Present Working Directory: ${data}`);
         //htmlpath.innerText = `Present Working Directory: ${data}`
     }
-    child = shell('./src/fastboot', ['-w', '--skip-reboot', 'update', 'src/blinkOS.zip']);
+    child = shell(`src/adb`, ['reboot', 'bootloader']);
+    for await (let data of child.stdout || child.stderr) {
+        console.log(`Entering bootloader: ${data}`);
+    }
+    child = shell(`src/fastboot`, ['flashing', 'unlock']);
+    for await (let data of child.stdout || child.stderr) {
+        console.log(`Unlocking bootloader: ${data}`);
+    }
+    child = shell('src/fastboot', ['-w', '--skip-reboot', 'update', 'src/blinkOS.zip']);
     console.log("Sideloading and flashing blinkOS, please be patient.");
     //htmlout.innerText = "Sideloading and flashing blinkOS, please be patient.";
     for await(let data of child.stdout || child.stderr) {
         console.log(`Flashing complete: ${data}.`);
         //htmlout.innerText = `Flashing complete: ${data}.`;
     }
-    // noinspection JSUnresolvedFunction
-    remote.getCurrentWebContents().loadUrl(`file://${__dirname}/bootloader-lock.html`);
+    remote.getCurrentWindow().loadURL(`file://${__dirname}/bootloader-lock.html`);
 }
 
 // noinspection JSCheckFunctionSignatures
