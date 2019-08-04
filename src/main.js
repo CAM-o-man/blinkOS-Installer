@@ -17,6 +17,8 @@ async function runScript() {
         console.log(`Flashing complete: ${data}.`);
         //htmlout.innerText = `Flashing complete: ${data}.`;
     }
+    // noinspection JSUnresolvedFunction
+    remote.getCurrentWebContents().loadUrl(`file://${__dirname}/bootloader-lock.html`);
 }
 
 // noinspection JSCheckFunctionSignatures
