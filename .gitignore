@@ -4,20 +4,7 @@
 node_modules
 out
 !.idea
-# Exclude Google licensed software
-make_f2fs
-mke2fs
-mke2fs.conf
-NOTICE.txt
-sload_f2fs
-source.properties
-sqlite3
-adb
-deployagent
-deployagent.jar
-deploypatchgenerator.jar
-dmtracedump
-e2fsdroid
-etc1tool
-fastboot
-hprof-conv
+/src/mke2fs
+/src/mke2fs.conf
+/src/fastboot
+/src/blinkOS.zip
