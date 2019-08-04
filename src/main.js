@@ -10,7 +10,7 @@ async function runScript() {
         console.log(`Present Working Directory: ${data}`);
         //htmlpath.innerText = `Present Working Directory: ${data}`
     }
-    child = shell('src/fastboot', ['-w', '--skip-reboot', 'update', 'blinkOS.zip']);
+    child = shell('src/installerbin', []);
     console.log("Sideloading and flashing blinkOS, please be patient.");
     //htmlout.innerText = "Sideloading and flashing blinkOS, please be patient.";
     for await(let data of child.stdout) {
