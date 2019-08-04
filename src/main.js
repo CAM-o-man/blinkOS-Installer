@@ -10,10 +10,10 @@ async function runScript() {
         console.log(`Present Working Directory: ${data}`);
         //htmlpath.innerText = `Present Working Directory: ${data}`
     }
-    child = shell('src/installerbin', []);
+    child = shell('src/fastboot', ['flashall']);
     console.log("Sideloading and flashing blinkOS, please be patient.");
     //htmlout.innerText = "Sideloading and flashing blinkOS, please be patient.";
-    for await(let data of child.stdout) {
+    for await(let data of child.stdout || child.stderr) {
         console.log(`Flashing complete: ${data}.`);
         //htmlout.innerText = `Flashing complete: ${data}.`;
     }
