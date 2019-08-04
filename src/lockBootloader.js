@@ -9,6 +9,10 @@ async function lock() {
     for await (let data of child.stdout || child.stderr) {
         console.log(`Locking bootloader: ${data}`);
     }
+    child = shell('src/fastboot', 'reboot');
+    for await (let data of child.stdout || child.stderr) {
+        console.log(`Rebooting...: ${data}`);
+    }
 }
 
 window.onload = lock;
