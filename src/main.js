@@ -14,10 +14,6 @@ async function runScript() {
     for await (let data of child.stdout || child.stderr) {
         console.log(`Entering bootloader: ${data}`);
     }
-    child = shell(`src/fastboot`, ['flashing', 'unlock']);
-    for await (let data of child.stdout || child.stderr) {
-        console.log(`Unlocking bootloader: ${data}`);
-    }
     child = shell('src/fastboot', ['-w', '--skip-reboot', 'update', 'src/blinkOS.zip']);
     console.log("Sideloading and flashing blinkOS, please be patient.");
     //htmlout.innerText = "Sideloading and flashing blinkOS, please be patient.";
