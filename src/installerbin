@@ -1,3 +1,0 @@
-#!/bin/sh
-
-./fastboot -w --skip-reboot update blinkOS.zip

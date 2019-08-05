@@ -1,7 +1,7 @@
 {
   "name": "blinkosinstaller",
   "productName": "blinkinstaller",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "The desktop installer for blinkOS, v1.0.0",
   "main": "src/index.js",
   "scripts": {
@@ -52,10 +52,12 @@
   },
   "dependencies": {
     "@cam-o-man/simpleshell": "1.2.1",
+    "curl": "^0.1.4",
     "electron-squirrel-startup": "^1.0.0",
     "events": "^3.0.0",
     "glob": "^7.1.4",
     "interpret": "^1.2.0",
+    "node-wget": "^0.4.3",
     "rechoir": "^0.7.0",
     "remote": "^0.2.6"
   },

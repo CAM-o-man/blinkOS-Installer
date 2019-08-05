@@ -10,11 +10,11 @@ async function runScript() {
         console.log(`Present Working Directory: ${data}`);
         //htmlpath.innerText = `Present Working Directory: ${data}`
     }
-    child = shell(`src/adb`, ['reboot', 'bootloader']);
+    child = shell(`src/platform-tools/adb`, ['reboot', 'bootloader']);
     for await (let data of child.stdout || child.stderr) {
         console.log(`Entering bootloader: ${data}`);
     }
-    child = shell('src/fastboot', ['-w', '--skip-reboot', 'update', 'src/blinkOS.zip']);
+    child = shell('src/platform-tools/fastboot', ['-w', '--skip-reboot', 'update', 'src/blinkOS.zip']);
     console.log("Sideloading and flashing blinkOS, please be patient.");
     //htmlout.innerText = "Sideloading and flashing blinkOS, please be patient.";
     for await(let data of child.stdout || child.stderr) {
