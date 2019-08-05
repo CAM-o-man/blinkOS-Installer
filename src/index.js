@@ -16,8 +16,8 @@ let mainWindow;
 const createWindow = () => {
     // Create the browser window.
     mainWindow = new BrowserWindow({
-        width: 600,
-        height: 450,
+        width: 650,
+        height: 500,
         webPreferences: {
             nodeIntegration: true
         },
@@ -25,7 +25,7 @@ const createWindow = () => {
     });
 
     //Removes top menu
-    mainWindow.removeMenu()
+    mainWindow.removeMenu();
 
     // and load the index.html of the app.
     mainWindow.loadURL(`file://${__dirname}/index.html`);
