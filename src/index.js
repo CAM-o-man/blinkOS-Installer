@@ -2,7 +2,6 @@ const {app, BrowserWindow} = require('electron');
 const EmitterBase = require('events');
 class Emitter extends EmitterBase {}
 const eventEmitter = new Emitter();
-const wget = require('node-wget');
 
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -89,21 +88,3 @@ eventEmitter.on('firstButtonClicked', () => {
                                                           //This is important to ensure that the ${__dirname} variable works.
 
 });
-
-wget( //Used to fetch the crucial platform-tools binaries from Google
-    {
-        url: 'https://dl.google.com/android/repository/platform-tools-latest-linux.zip',
-        dest: `${__dirname}/platform-tools`,
-        timeout: 5000
-    },
-    (error, response, body) => {
-        if (error) {
-            console.log(error);
-        } else {
-            console.log('---headers---');
-            console.log(response.headers);
-            console.log('---body---');
-            console.log(body);
-        }
-    }
-);

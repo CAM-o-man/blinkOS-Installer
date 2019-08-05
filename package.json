@@ -1,8 +1,8 @@
 {
-  "name": "blinkosinstaller",
-  "productName": "blinkinstaller",
+  "name": "blinkinstall",
+  "productName": "blinkinstall",
   "version": "2.0.0",
-  "description": "The desktop installer for blinkOS, v1.0.0",
+  "description": "The desktop installer for blinkOS, v2.0.0",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
@@ -26,6 +26,19 @@
   "config": {
     "forge": {
       "packagerConfig": {},
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip",
+          "dmg"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
